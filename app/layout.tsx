@@ -8,6 +8,7 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs';
+import { ModalProvider } from "@/provider/modal-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body className="inter.className">
+          <ModalProvider/>
           {/* <SignedOut>
             <SignInButton />
           </SignedOut> */}
